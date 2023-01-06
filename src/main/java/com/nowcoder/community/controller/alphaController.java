@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
+/**
+ * @author ftxcn
+ */
 @Controller
 @RequestMapping("/alpha")
 public class alphaController {
