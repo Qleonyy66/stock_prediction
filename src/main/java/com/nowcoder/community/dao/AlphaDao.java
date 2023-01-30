@@ -1,4 +1,4 @@
-package com.nowcoder.community.dataaccessobject;
+package com.nowcoder.community.dao;
 
 public interface AlphaDao  {
     String select();
