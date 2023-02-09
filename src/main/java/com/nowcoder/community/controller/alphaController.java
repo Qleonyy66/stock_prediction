@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
+import java.util.*;
 
+/**
+ * @author ftxcn
+ */
 @Controller
 @RequestMapping("/alpha")
 public class alphaController {
@@ -109,5 +112,47 @@ public class alphaController {
         model.addAttribute("age",44);
 
         return "/demo/view";
+    }
+
+    //响应json数据
+    //用于异步请求之中
+    //当前网页不刷新，访问服务器
+    //java对象 -> json字符串 -> JS对象 （跨语言）
+    @RequestMapping(path = "/emp",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> getemp(){
+        Map<String,Object> emp = new HashMap<>();
+
+        emp.put("name","zhangsan");
+        emp.put("age",23);
+        emp.put("salary",800.00);
+        return emp;
+    }
+
+    @RequestMapping(path = "/emps",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Map<String,Object>>  getemps(){
+        List<Map<String,Object>> emps= new ArrayList<>();
+        Map<String,Object> emp = new HashMap<>();
+
+        emp.put("name","zhangsan");
+        emp.put("age",23);
+        emp.put("salary",800.00);
+        emps.add(emp);
+
+        emp = new HashMap<>();
+
+        emp.put("name","zhangsan1");
+        emp.put("age",231);
+        emp.put("salary",8001.00);
+        emps.add(emp);
+        emp = new HashMap<>();
+
+        emp.put("name","zhangsan2");
+        emp.put("age",232);
+        emp.put("salary",8002.00);
+        emps.add(emp);
+
+        return emps;
     }
 }
