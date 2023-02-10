@@ -1,6 +1,8 @@
 package com.nowcoder.community;
 
 import com.nowcoder.community.dao.AlphaDao;
+import com.nowcoder.community.dao.UserMapper;
+import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.AlphaService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeansException;
@@ -74,4 +76,6 @@ class CommunityApplicationTests implements ApplicationContextAware {
 		System.out.println(alphaService);
 		System.out.println(simpleDateFormat);
 	}
+
+
 }
