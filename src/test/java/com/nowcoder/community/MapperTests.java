@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 
@@ -19,9 +18,9 @@ public class MapperTests {
     private UserMapper userMapper;
 
     @Test
-    public void testSelectUser(){
+    public void testSelectUser() {
         System.out.println(userMapper.selectById(101));
-        User usertoselect= userMapper.selectById(101);
+        User usertoselect = userMapper.selectById(101);
         System.out.println(usertoselect);
 
         usertoselect = userMapper.selectByName("liubei");
@@ -31,22 +30,9 @@ public class MapperTests {
         System.out.println(usertoselect);
     }
 
-
     @Test
-    public void updataUser(){
-        System.out.println(userMapper.updateStatus(170,1));
-        int rows = userMapper.updateStatus(170,1);
-        System.out.println(rows);
-
-        rows= userMapper.updateHeader(170,"http://www.nowcoder.com/103.png");
-        System.out.println(rows);
-
-        rows= userMapper.updatePassword(170,"weishenmehuiocharunehello");
-        System.out.println(rows);
-    }
-    @Test
-    public void testInsertUser(){
-        User usertoinsert=new User();
+    public void testInsertUser() {
+        User usertoinsert = new User();
         usertoinsert.setUsername("test");
         usertoinsert.setPassword("123456");
         usertoinsert.setSalt("abc");
@@ -58,6 +44,19 @@ public class MapperTests {
         System.out.println(rows11);
         System.out.println(usertoinsert.getId());
 
+    }
+
+    @Test
+    public void updataUser() {
+        System.out.println(userMapper.updateStatus(150, 1));
+        int rows = userMapper.updateStatus(150, 1);
+        System.out.println(rows);
+
+        rows = userMapper.updateHeader(150, "http://www.nowcoder.com/103.png");
+        System.out.println(rows);
+
+        rows = userMapper.updatePassword(150, "willo");
+        System.out.println(rows);
     }
 
 
