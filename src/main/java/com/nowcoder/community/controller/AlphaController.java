@@ -15,7 +15,7 @@ import java.util.Enumeration;
 
 @Controller
 @RequestMapping("/alpha")
-public class alphaController {
+public class AlphaController {
 
     @Autowired
     private AlphaService alphaService;
