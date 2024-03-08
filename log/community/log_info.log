@@ -15,3 +15,43 @@
 2024-03-08 11:48:16,667 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
 2024-03-08 11:48:16,668 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:61] Started CommunityApplication in 0.152 seconds (JVM running for 43170.038)
 2024-03-08 11:48:16,669 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2024-03-08 20:52:13,972 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 14364 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 20:52:13,973 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 20:52:14,699 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 20:52:14,815 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.039 seconds (JVM running for 1.923)
+2024-03-08 20:53:05,691 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 14381 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 20:53:05,693 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 20:53:06,361 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 20:53:06,473 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 0.965 seconds (JVM running for 1.322)
+2024-03-08 20:58:15,761 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 14496 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 20:58:15,762 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 20:58:16,438 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 20:58:16,555 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.002 seconds (JVM running for 1.468)
+2024-03-08 21:22:10,212 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 14995 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:22:10,213 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:22:10,887 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:22:11,001 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 0.997 seconds (JVM running for 1.481)
+2024-03-08 21:24:43,687 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15120 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:24:43,688 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:24:44,446 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:24:44,574 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.14 seconds (JVM running for 1.716)
+2024-03-08 21:25:33,753 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15139 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:25:33,754 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:25:34,456 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:25:34,574 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.029 seconds (JVM running for 1.459)
+2024-03-08 21:26:00,377 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15149 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:26:00,378 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:26:01,038 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:26:01,167 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 0.969 seconds (JVM running for 1.4)
+2024-03-08 21:38:07,284 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15274 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:38:07,285 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:38:08,015 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:38:08,133 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.083 seconds (JVM running for 1.501)
+2024-03-08 21:40:30,049 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15300 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:40:30,050 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:40:30,759 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:40:30,879 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 1.096 seconds (JVM running for 1.645)
+2024-03-08 21:40:56,276 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:55] Starting MailTests using Java 17.0.10 on cengxiaohuideMac-mini.local with PID 15312 (started by zenghui in /Users/zenghui/IdeaProjects/community)
+2024-03-08 21:40:56,278 INFO [main] c.n.c.MailTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2024-03-08 21:40:56,944 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2024-03-08 21:40:57,061 INFO [main] c.n.c.MailTests [StartupInfoLogger.java:61] Started MailTests in 0.999 seconds (JVM running for 1.483)
