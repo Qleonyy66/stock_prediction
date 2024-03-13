@@ -19,7 +19,7 @@ public class AlphaService {
         System.out.println("实例化 constructor");
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void init(){
         System.out.println("initial service");
     }
