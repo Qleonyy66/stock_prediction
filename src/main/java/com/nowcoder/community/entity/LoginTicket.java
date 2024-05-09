@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class LoginTicket {
 
-    private  int id;
-    private  int userId;
-    private  String ticket;
-    private  int Status;
-    private Date expired  ;
+    private int id;
+    private int userId;
+    private String ticket;
+    private int status;
+    private Date expired;
 
     public int getId() {
         return id;
@@ -35,11 +35,11 @@ public class LoginTicket {
     }
 
     public int getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(int status) {
-        Status = status;
+        this.status = status;
     }
 
     public Date getExpired() {
@@ -56,7 +56,7 @@ public class LoginTicket {
                 "id=" + id +
                 ", userId=" + userId +
                 ", ticket='" + ticket + '\'' +
-                ", Status=" + Status +
+                ", status=" + status +
                 ", expired=" + expired +
                 '}';
     }

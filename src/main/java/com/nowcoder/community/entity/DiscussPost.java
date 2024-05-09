@@ -14,7 +14,6 @@ public class DiscussPost {
     private int commentCount;
     private double score;
 
-
     public int getId() {
         return id;
     }

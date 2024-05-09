@@ -8,7 +8,7 @@ public interface UserMapper {
 
     User selectById(int id);
 
-    User selectByName(String userName);
+    User selectByName(String username);
 
     User selectByEmail(String email);
 

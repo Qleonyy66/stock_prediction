@@ -2,16 +2,12 @@ package com.nowcoder.community.entity;
 
 
 /**
- * 封装分页相关的信息
- * <p>
- * 接收页面传入信息
+ * 封装分页相关的信息.
  */
 
 public class Page {
 
-
     //当前页码
-
     private int current = 1;
     //上限
     private int limit = 10;
@@ -20,13 +16,14 @@ public class Page {
     //查询路径 用于复用查询分页链接
     private String path;
 
-
     public int getCurrent() {
         return current;
     }
 
     public void setCurrent(int current) {
-        if (current >= 1) this.current = current;
+        if (current >= 1) {
+            this.current = current;
+        }
     }
 
     public int getLimit() {
@@ -34,7 +31,9 @@ public class Page {
     }
 
     public void setLimit(int limit) {
-        if (limit >= 1 && limit <= 100) this.limit = limit;
+        if (limit >= 1 && limit <= 100) {
+            this.limit = limit;
+        }
     }
 
     public int getRows() {
@@ -42,7 +41,9 @@ public class Page {
     }
 
     public void setRows(int rows) {
-        if (rows >= 0) this.rows = rows;
+        if (rows >= 0) {
+            this.rows = rows;
+        }
     }
 
     public String getPath() {
@@ -69,10 +70,9 @@ public class Page {
      */
     public int getTotal() {
         //行数是整数倍页面行数时
-        if ((rows % limit) == 0) {
+        if (rows % limit == 0) {
             return rows / limit;
         } else {
-
             return rows / limit + 1;
         }
     }
@@ -84,7 +84,8 @@ public class Page {
      * @return
      */
     public int getFrom() {
-        return Math.max(1, current - 2);
+        int from = current - 2;
+        return from < 1 ? 1 : from;
     }
 
     /**
@@ -92,10 +93,10 @@ public class Page {
      *
      * @return
      */
-
-
     public int getTo() {
-        return Math.min(getTotal(), current + 2);
+        int to = current + 2;
+        int total = getTotal();
+        return to > total ? total : to;
     }
 
 }

@@ -40,7 +40,6 @@ public class HomeController {
                Map<String,Object> map = new HashMap<>();
                map.put("post",post);
                User user= userService.findUserById(post.getUserId());
-
                map.put("user",user);
                discussPosts.add(map);
            }
@@ -48,6 +47,5 @@ public class HomeController {
        model.addAttribute("discussPosts",discussPosts);
        return "/index";
     }
-
 
 }

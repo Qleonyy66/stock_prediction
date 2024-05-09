@@ -41,6 +41,8 @@ public class AlphaController {
     @RequestMapping("/http")
     public void http(HttpServletRequest request, HttpServletResponse response) {
         //huoqu qingqiu shuju
+        System.out.println("request.getMethod() = " + request.getMethod());
+        System.out.println("request.getServletPath() = " + request.getServletPath());
         System.out.println(request.getMethod());
         System.out.println(request.getServletPath());
         Enumeration<String> enumeration = request.getHeaderNames();
@@ -54,7 +56,7 @@ public class AlphaController {
         // gei liulanqi fanhui xiangying shuju
         response.setContentType("text/html;charset=utf-8");
         try (PrintWriter writer = response.getWriter()) {
-            writer.write("<h1>niukewang</h1>");
+            writer.write("<h1>PlatForm for final design</h1>");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
