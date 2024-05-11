@@ -201,3 +201,4 @@
 2024-05-11 02:07:38,013 ERROR [http-nio-8080-exec-2] c.n.c.c.a.ExceptionAdvice [ExceptionAdvice.java:24] org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 2024-05-11 02:07:38,013 ERROR [http-nio-8080-exec-2] c.n.c.c.a.ExceptionAdvice [ExceptionAdvice.java:24] org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 2024-05-11 02:07:38,013 ERROR [http-nio-8080-exec-2] c.n.c.c.a.ExceptionAdvice [ExceptionAdvice.java:24] java.base/java.lang.Thread.run(Thread.java:840)
+2024-05-11 16:43:47,584 ERROR [main] c.n.c.LoggerTests [LoggerTests.java:26] error log

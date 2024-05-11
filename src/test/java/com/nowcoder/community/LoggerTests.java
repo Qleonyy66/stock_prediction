@@ -1,6 +1,5 @@
 package com.nowcoder.community;
 
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -17,13 +16,13 @@ public class LoggerTests {
     private static final Logger logger = LoggerFactory.getLogger(LoggerTests.class);
 
     @Test
-    public void testLogger(){
+    public void testLogger() {
         System.out.println(logger.getName());
 
         logger.debug("debug log");
         logger.info("info log");
         logger.warn("warn log");
         logger.error("error log");
-
     }
+
 }

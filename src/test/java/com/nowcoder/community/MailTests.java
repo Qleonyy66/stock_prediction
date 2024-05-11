@@ -1,6 +1,5 @@
 package com.nowcoder.community;
 
-
 import com.nowcoder.community.util.MailClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +19,7 @@ public class MailTests {
     private MailClient mailClient;
 
     @Autowired
-    TemplateEngine templateEngine;
+    private TemplateEngine templateEngine;
 
     @Test
     public void testTextMail(){
@@ -30,11 +29,11 @@ public class MailTests {
 
 
     @Test
-    public void testHtmlMail(){
+    public void testHtmlMail() {
         Context context = new Context();
-        context.setVariable("username","sunday");
+        context.setVariable("username", "sunday");
 
-        String content= templateEngine.process("/mail/demo",context);
+        String content = templateEngine.process("/mail/demo", context);
         System.out.println(content);
 
         mailClient.sendMail("hkuxzh0106@gmail.com","TESTHTML",content);
