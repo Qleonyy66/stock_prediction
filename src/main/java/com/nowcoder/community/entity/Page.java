@@ -1,19 +1,17 @@
 package com.nowcoder.community.entity;
 
-
 /**
  * 封装分页相关的信息.
  */
-
 public class Page {
 
-    //当前页码
+    // 当前页码
     private int current = 1;
-    //上限
+    // 显示上限
     private int limit = 10;
-    //数据总数 用于计算总页数
+    // 数据总数(用于计算总页数)
     private int rows;
-    //查询路径 用于复用查询分页链接
+    // 查询路径(用于复用分页链接)
     private String path;
 
     public int getCurrent() {
@@ -60,6 +58,7 @@ public class Page {
      * @return
      */
     public int getOffset() {
+        // current * limit - limit
         return (current - 1) * limit;
     }
 
@@ -69,14 +68,13 @@ public class Page {
      * @return
      */
     public int getTotal() {
-        //行数是整数倍页面行数时
+        // rows / limit [+1]
         if (rows % limit == 0) {
             return rows / limit;
         } else {
             return rows / limit + 1;
         }
     }
-
 
     /**
      * 获取起始页码

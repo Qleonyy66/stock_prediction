@@ -49,49 +49,49 @@ public class UserService implements CommunityConstant {
 
         // 空值处理
         if (user == null) {
-            throw new IllegalArgumentException("参数不能为空");
+            throw new IllegalArgumentException("参数不能为空!");
         }
         if (StringUtils.isBlank(user.getUsername())) {
-            map.put("usernameMsg", "账号不能为空");
+            map.put("usernameMsg", "账号不能为空!");
             return map;
         }
         if (StringUtils.isBlank(user.getPassword())) {
-            map.put("passwordMsg", "密码不能为空");
+            map.put("passwordMsg", "密码不能为空!");
             return map;
         }
         if (StringUtils.isBlank(user.getEmail())) {
-            map.put("emailMsg", "邮箱不能为空");
+            map.put("emailMsg", "邮箱不能为空!");
             return map;
         }
 
-        //验证账号
+        // 验证账号
         User u = userMapper.selectByName(user.getUsername());
         if (u != null) {
-            map.put("usernameMsg", "该账号已存在");
+            map.put("usernameMsg", "该账号已存在!");
             return map;
         }
 
-        //验证邮箱
+        // 验证邮箱
         u = userMapper.selectByEmail(user.getEmail());
         if (u != null) {
-            map.put("emailMsg", "该邮箱已被注册");
+            map.put("emailMsg", "该邮箱已被注册!");
             return map;
         }
 
-        //注册用户
+        // 注册用户
         user.setSalt(CommunityUtil.generateUUID().substring(0, 5));
         user.setPassword(CommunityUtil.md5(user.getPassword() + user.getSalt()));
         user.setType(0);
         user.setStatus(0);
         user.setActivationCode(CommunityUtil.generateUUID());
-        user.setHeaderUrl(String.format("https://ui-avatars.com/api/?background=random&name=%s", user.getUsername()));
+        user.setHeaderUrl(String.format("http://images.nowcoder.com/head/%dt.png", new Random().nextInt(1000)));
         user.setCreateTime(new Date());
         userMapper.insertUser(user);
 
-        //发送激活邮件
+        // 激活邮件
         Context context = new Context();
         context.setVariable("email", user.getEmail());
-        //http://localhost:8080/community/activation/101/code
+        // http://localhost:8080/community/activation/101/code
         String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
         String content = templateEngine.process("/mail/activation", context);
@@ -100,7 +100,6 @@ public class UserService implements CommunityConstant {
         return map;
     }
 
-    //激活账号
     public int activation(int userId, String code) {
         User user = userMapper.selectById(userId);
         if (user.getStatus() == 1) {
@@ -126,7 +125,7 @@ public class UserService implements CommunityConstant {
             return map;
         }
 
-        //yanzheng
+        // 验证账号
         User user = userMapper.selectByName(username);
         if (user == null) {
             map.put("usernameMsg", "该账号不存在!");
@@ -153,7 +152,6 @@ public class UserService implements CommunityConstant {
         loginTicket.setStatus(0);
         loginTicket.setExpired(new Date(System.currentTimeMillis() + expiredSeconds * 1000));
         loginTicketMapper.insertLoginTicket(loginTicket);
-        map.put("ticket",loginTicket.getTicket() );
 
         map.put("ticket", loginTicket.getTicket());
         return map;
@@ -169,6 +167,10 @@ public class UserService implements CommunityConstant {
 
     public int updateHeader(int userId, String headerUrl) {
         return userMapper.updateHeader(userId, headerUrl);
+    }
+
+    public User findUserByName(String username) {
+        return userMapper.selectByName(username);
     }
 
 }
