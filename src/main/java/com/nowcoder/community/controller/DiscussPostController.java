@@ -1,5 +1,6 @@
 package com.nowcoder.community.controller;
 
+import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.Page;
@@ -42,6 +43,7 @@ public class DiscussPostController implements CommunityConstant {
 
     @RequestMapping(path = "/add", method = RequestMethod.POST)
     @ResponseBody
+    @LoginRequired
     public String addDiscussPost(String title, String content) {
         User user = hostHolder.getUser();
         if (user == null) {

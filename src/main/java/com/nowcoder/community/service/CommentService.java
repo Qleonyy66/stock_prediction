@@ -1,5 +1,6 @@
 package com.nowcoder.community.service;
 
+import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.dao.CommentMapper;
 import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.util.CommunityConstant;
@@ -33,6 +34,8 @@ public class CommentService implements CommunityConstant {
         return commentMapper.selectCountByEntity(entityType, entityId);
     }
 
+
+    @LoginRequired
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
     public int addComment(Comment comment) {
         if (comment == null) {

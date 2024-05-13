@@ -38,8 +38,10 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
                 // 在本次请求中持有用户
                 hostHolder.setUser(user);
             }
+            return true;
         }
 
+//        response.sendRedirect(request.getContextPath() + "/login");
         return true;
     }
 

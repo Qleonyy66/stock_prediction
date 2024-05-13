@@ -1,5 +1,6 @@
 package com.nowcoder.community.aspect;
 
+import com.nowcoder.community.annotation.LoginRequired;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
