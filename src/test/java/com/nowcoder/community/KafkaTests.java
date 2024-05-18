@@ -4,8 +4,6 @@ package com.nowcoder.community;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -26,9 +24,9 @@ public class KafkaTests {
        kafkaProducer.sendMessage("test","在吗");
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1000 * 10);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -48,6 +46,6 @@ class KafkaProducer{
 class KafkaConsumer{
     @KafkaListener(topics ={"test"})
     public void handleMessage(ConsumerRecord record){
-        System.out.println("record.value() = " + record.value());
+        System.out.println(record.value());
     }
 }
