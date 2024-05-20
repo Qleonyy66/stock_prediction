@@ -7,8 +7,61 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" th:href="@{/css/global.css}" />
 	<link rel="stylesheet" th:href="@{/css/login.css}" />
-	<title>牛客网-注册</title>
+	<title>Register</title>
 </head>
+<style>
+	.custom-form-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh; /* 使容器占满整个视口高度 */
+	}
+	.custom-form {
+		width: 1200px;
+		height: 500px;/* 设置表单的固定宽度 */
+		background-color: #fff;
+		padding: 10px;
+		border-radius: 2px;
+		box-shadow: 0 0 10px rgba(0.5, 0.5, 0.5, 0.5);
+
+	.custom-link {
+		color:  #17a2b8; /* 设置链接文本颜色为蓝色 */
+		text-decoration: none; /* 移除下划线 */
+		font-weight: bold; /* 设置文本粗体 */
+		border: 1px solid  #17a2b8; /* 添加边框 */
+		padding: 5px 10px; /* 添加内边距 */
+		border-radius: 5px; /* 添加圆角 */
+	}
+
+	.custom-link:hover {
+		background-color:  #17a2b8; /* 鼠标悬停时的背景颜色 */
+		color: #fff; /* 鼠标悬停时的文本颜色 */
+	}
+	.custom-link1 {
+		color: #dc3545; /* 设置链接文本颜色为红色 */
+		text-decoration: none; /* 移除下划线 */
+		position: absolute; /* 设置绝对定位 */
+		left: 630px; /* 设置链接相对于页面左侧的偏移量 */
+	}
+
+	.custom-link1:hover {
+		color: #ff0000; /* 鼠标悬停时的文本颜色为深红色 */
+		text-decoration: underline; /* 鼠标悬停时添加下划线 */
+	}
+	.custom-button {
+		position: absolute; /* 设置绝对定位 */
+		left: 200px; /* 将按钮的左边缘与页面的水平中心对齐 */
+		top: 20px; /* 将按钮的上边缘与页面的垂直中心对齐 */
+		/* 将按钮在水平和垂直方向上向左和向上移动自身宽高的一半，以使其居中 */
+		background-color:  #17a2b8;
+		color: #fff;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 将阴影颜色改为白色 */
+		border: none;
+		height: 40px;
+		width: 400px; /* 增加按钮宽度 */
+	}
+	}
+</style>
 <body>
 	<div class="nk-container">
 		<!-- 头部 -->
@@ -60,52 +113,52 @@
 		</header>
 
 		<!-- 内容 -->
-		<div class="main">
-			<div class="container pl-5 pr-5 pt-3 pb-3 mt-3 mb-3">
-				<h3 class="text-center text-info border-bottom pb-3">注&nbsp;&nbsp;册</h3>
+		<div class="custom-form-container">
+			<div class="custom-form">
+				<h3 class="text-center text-info border-bottom pb-3">Register</h3>
 				<form class="mt-5" method="post" th:action="@{/register}">
 					<div class="form-group row">
-						<label for="username" class="col-sm-2 col-form-label text-right">账号:</label>
+						<label for="username" class="col-sm-2 col-form-label text-center" style="background-color: #17a2b8; color: #fff; padding: 10px; border-radius: 5px; border: none; transition: background-color 0.3s;">Account:</label>
 						<div class="col-sm-10">
 							<input type="text"
 								   th:class="|form-control ${usernameMsg!=null?'is-invalid':''}|"
 								   th:value="${user!=null?user.username:''}"
-								   id="username" name="username" placeholder="请输入您的账号!" required>
+								   id="username" name="username" placeholder="Please enter your account!" required>
 							<div class="invalid-feedback" th:text="${usernameMsg}">
 								该账号已存在!
 							</div>
 						</div>
 					</div>
 					<div class="form-group row mt-4">
-						<label for="password" class="col-sm-2 col-form-label text-right">密码:</label>
+						<label for="password" class="col-sm-2 col-form-label text-center" style="background-color: #17a2b8; color: #fff; padding: 10px; border-radius: 5px; border: none; transition: background-color 0.3s;">Password:</label>
 						<div class="col-sm-10">
 							<input type="password"
 								   th:class="|form-control ${passwordMsg!=null?'is-invalid':''}|"
 								   th:value="${user!=null?user.password:''}"
-								   id="password" name="password" placeholder="请输入您的密码!" required>
+								   id="password" name="password" placeholder="Please enter your password!" required>
 							<div class="invalid-feedback" th:text="${passwordMsg}">
 								密码长度不能小于8位!
-							</div>							
+							</div>
 						</div>
 					</div>
 					<div class="form-group row mt-4">
-						<label for="confirm-password" class="col-sm-2 col-form-label text-right">确认密码:</label>
+						<label for="confirm-password" class="col-sm-2 col-form-label text-center" style="background-color: #17a2b8; color: #fff; padding: 10px; border-radius: 5px; border: none; transition: background-color 0.3s;">Password:</label>
 						<div class="col-sm-10">
 							<input type="password" class="form-control"
 								   th:value="${user!=null?user.password:''}"
-								   id="confirm-password" placeholder="请再次输入密码!" required>
+								   id="confirm-password" placeholder="Please enter your password again!" required>
 							<div class="invalid-feedback">
 								两次输入的密码不一致!
 							</div>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="email" class="col-sm-2 col-form-label text-right">邮箱:</label>
+						<label for="email" class="col-sm-2 col-form-label text-center" style="background-color: #17a2b8; color: #fff; padding: 10px; border-radius: 5px; border: none; transition: background-color 0.3s;">E-mail:</label>
 						<div class="col-sm-10">
 							<input type="email"
 								   th:class="|form-control ${emailMsg!=null?'is-invalid':''}|"
 								   th:value="${user!=null?user.email:''}"
-								   id="email" name="email" placeholder="请输入您的邮箱!" required>
+								   id="email" name="email" placeholder="Please enter your email!" required>
 							<div class="invalid-feedback" th:text="${emailMsg}">
 								该邮箱已注册!
 							</div>
@@ -114,74 +167,12 @@
 					<div class="form-group row mt-4">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10 text-center">
-							<button type="submit" class="btn btn-info text-white form-control">立即注册</button>
+							<button type="submit" class="custom-button">Register!</button>
 						</div>
 					</div>
-				</form>				
+				</form>
 			</div>
 		</div>
-
-		<!-- 尾部 -->
-		<footer class="bg-dark">
-			<div class="container">
-				<div class="row">
-					<!-- 二维码 -->
-					<div class="col-4 qrcode">
-						<img src="https://uploadfiles.nowcoder.com/app/app_download.png" class="img-thumbnail" style="width:136px;" />
-					</div>
-					<!-- 公司信息 -->
-					<div class="col-8 detail-info">
-						<div class="row">
-							<div class="col">
-								<ul class="nav">
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">关于我们</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">加入我们</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">意见反馈</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">企业服务</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">联系我们</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">免责声明</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link text-light" href="#">友情链接</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col">
-								<ul class="nav btn-group-vertical company-info">
-									<li class="nav-item text-white-50">
-										公司地址：北京市朝阳区大屯路东金泉时代3-2708北京牛客科技有限公司
-									</li>
-									<li class="nav-item text-white-50">
-										联系方式：010-60728802(电话)&nbsp;&nbsp;&nbsp;&nbsp;admin@nowcoder.com
-									</li>
-									<li class="nav-item text-white-50">
-										牛客科技©2018 All rights reserved
-									</li>
-									<li class="nav-item text-white-50">
-										京ICP备14055008号-4 &nbsp;&nbsp;&nbsp;&nbsp;
-										<img src="http://static.nowcoder.com/company/images/res/ghs.png" style="width:18px;" />
-										京公网安备 11010502036488号
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>

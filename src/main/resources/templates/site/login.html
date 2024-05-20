@@ -22,6 +22,7 @@
 		border: 1px solid  #17a2b8; /* 添加边框 */
 		padding: 5px 10px; /* 添加内边距 */
 		border-radius: 5px; /* 添加圆角 */
+
 	}
 
 	.custom-link:hover {
@@ -38,6 +39,24 @@
 	.custom-link1:hover {
 		color: #ff0000; /* 鼠标悬停时的文本颜色为深红色 */
 		text-decoration: underline; /* 鼠标悬停时添加下划线 */
+	}
+	.custom-button {
+		position: absolute; /* 设置绝对定位 */
+		left: -20px; /* 将按钮的左边缘与页面的水平中心对齐 */
+		top: 20px; /* 将按钮的上边缘与页面的垂直中心对齐 */
+		 /* 将按钮在水平和垂直方向上向左和向上移动自身宽高的一半，以使其居中 */
+		background-color:  #17a2b8;
+		color: #fff;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 将阴影颜色改为白色 */
+		border: none;
+		height: 40px;
+		width: 400px; /* 增加按钮宽度 */
+	}
+	.custom-label {
+		position: absolute; /* 设置绝对定位 */
+		left: 50%; /* 将标签的左边缘与页面的水平中心对齐 */
+		top: 50%; /* 将标签的上边缘与页面的垂直中心对齐 */
+		transform: translate(-50%, -50%); /* 将标签在水平和垂直方向上向左和向上移动自身宽高的一半，以使其居中 */
 	}
 	}
 </style>
@@ -80,7 +99,7 @@
 							<input type="text" th:class="|form-control ${usernameMsg!=null?'is-invalid':''}|"
 								   th:value="${param.username}"
 								   id="username" name="username" placeholder="Please enter your account!" required
-								   style="background-color: #f8f9fa; border: 2px solid #ced4da; border-radius: 8px; padding: 10px; font-size: 14px; width: 250px;">
+								   style="background-color: #ffffff; border: 1px solid #ced4da; padding: 10px; font-size: 14px; width: 450px; height: 40px">
 							<div class="invalid-feedback" th:text="${usernameMsg}">
 								该账号不存在!
 							</div>
@@ -92,7 +111,7 @@
 							<input type="password" th:class="|form-control ${passwordMsg!=null?'is-invalid':''}|"
 								   th:value="${param.password}"
 								   id="password" name="password" placeholder="Please enter your password!" required
-								   style="background-color: #f8f9fa; border: 2px solid #ced4da; border-radius: 8px; padding: 10px; font-size: 14px; width: 250px;">
+								   style="background-color: #fff; border: 1px solid #ced4da; padding: 10px; font-size: 14px; width: 450px; height: 40px">
 							<div class="invalid-feedback" th:text="${passwordMsg}">
 								密码长度不能小于8位!
 							</div>
@@ -102,7 +121,7 @@
 						<label for="verifycode" class="col-sm-2 col-form-label text-center" style="background-color: #17a2b8; color: #fff; padding: 10px; border-radius: 5px; border: none; transition: background-color 0.3s;">Verification code:</label>
 						<div class="col-sm-6">
 							<input type="text" th:class="|form-control ${codeMsg!=null?'is-invalid':''}|"
-								   id="verifycode" name="code" placeholder="Please enter verification code!" style="background-color: #f8f9fa; border: 2px solid #ced4da; border-radius: 8px; padding: 10px; font-size: 14px; width: 250px;">
+								   id="verifycode" name="code" placeholder="Please enter verification code!" style="background-color: #fff; border: 1px solid #ced4da;  padding: 10px; font-size: 14px; width: 450px; height: 40px">
 							<div class="invalid-feedback" th:text="${codeMsg}">
 								验证码不正确!
 							</div>
@@ -124,7 +143,7 @@
 					<div class="container mt-4">
 						<div class="row justify-content-center">
 							<div class="col-md-6 text-center">
-								<button type="submit" class="btn btn-info text-white" style="width: 400px;">Login</button>
+								<button type="submit" class="custom-button" style="width: 600px;">Login</button>
 							</div>
 						</div>
 					</div>
