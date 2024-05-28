@@ -1,0 +1,2 @@
+2024-05-21 01:21:59,891 WARN [lettuce-nioEventLoop-4-2] i.l.c.p.ConnectionWatchdog [AbstractInternalLogger.java:151] Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: getsockopt: localhost/127.0.0.1:6379
+2024-05-21 01:22:08,879 WARN [lettuce-nioEventLoop-4-6] i.l.c.p.ConnectionWatchdog [AbstractInternalLogger.java:151] Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: getsockopt: localhost/127.0.0.1:6379
